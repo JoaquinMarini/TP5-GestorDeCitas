@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import {Button, Form} from 'react-bootstrap';
-import { useState } from "react"
-
 
 export default function Formulario( {setCitas} ){
     const [mascota, setMascota] = useState("")
@@ -10,12 +8,24 @@ export default function Formulario( {setCitas} ){
     const [hora, setHora] = useState("")
     const [sintomas, setSintomas] = useState("")
 
-function onSubmit(e) {
-    e.preventDefault()
-}
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setCitas(prev => [...prev, {
+          mascota,
+          dueño,
+          fecha,
+          hora,
+          sintomas
+      }])
+      setMascota("")
+      setDueño("")
+      setFecha("")
+      setHora("")
+      setSintomas("")
+  }
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="Mascota">
         <Form.Label>Nombre Mascota </Form.Label>
         <Form.Control type="text" placeholder="Nombre Mascota " value={mascota} onChange={e => setMascota(e.target.value)} />

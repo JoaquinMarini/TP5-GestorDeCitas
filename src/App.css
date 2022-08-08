@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+  background-attachment: fixed;
+}
+
+.formulario{
+  margin-top: 5000px;
+}
+
+.listado{
+  border-radius:60em;
+}
