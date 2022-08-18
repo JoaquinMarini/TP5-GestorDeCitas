@@ -15,14 +15,14 @@ function App(){
 
   return (
     <>
-    <Container>
-        <h1>ADMINISTRADOR DE PACIENTES</h1>
-          <Row>
-            <Col>
+      <Container>
+        <h1 className='titulo'>ADMINISTRADOR DE PACIENTES</h1>
+          <Row className='justify-content-center'>
+            <Col  md lg='5'>
               <Formulario className="formulario" setCitas={setCitas}/>
             </Col>
-            <Col>
-              <ListadoCitas className="listado" citas={citas} setCitas={setCitas}/>
+            <Col md lg='5'>
+              <ListadoCitas className = "listado" citas={citas} setCitas={setCitas}/>
             </Col>
           </Row>
       </Container>

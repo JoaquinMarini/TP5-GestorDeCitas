@@ -1,6 +1,6 @@
 export default function Cita (props) {
     return (
-        <div className="bg-white rounded-md text-black py-4 px-6 shadow-sm">
+        <div className="bg-white rounded-md text-black py-4 px-6 shadow-sm listado">
             <p><strong>Mascota: </strong>{props.mascota}</p>
             <p><strong>Dueño: </strong>{props.dueño}</p>
             <p><strong>Fecha: </strong>{props.fecha}</p>
